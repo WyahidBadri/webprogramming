@@ -20,3 +20,35 @@
 .App-link {
   color: #09d3ac;
 }
+ .coloring{
+   color: rebeccapurple;
+
+ }
+
+ .first{
+   border: black solid;
+   top:10%;
+   height:170px;
+   width:100%;
+   
+ }
+
+ .div{
+   top:40%;
+background-color: grey;
+ }
+
+ .medium {
+  background-color: red;
+  width: 100%;
+  margin: 0 auto;
+
+  
+  @media only screen and(min-width : 786px) {
+    width: 50%;
+    background-color: blue;
+  }
+
+ 
+  
+}

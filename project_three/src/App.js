@@ -1,7 +1,9 @@
+
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
+//import "./index.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -44,19 +46,28 @@ class App extends React.Component {
     }
 
     return (
+      <div className="medium">
       <div className="App">
-        <h1>GIF Search</h1>
+        <div className="first">
+        <h1 className="coloring">GIF Search</h1>
         <input
           type="text"
           id="gif-search-input"
           value={searchTerm}
           onChange={this.handleChange}
         />
+      
+    
         <button id="gif-search-submit" onClick={this.handleClick}>
           Search
         </button>
+        </div>
+        
+        
+      
         <div>
           {imgs.map((img, i) => (
+            <div className="div">
             <img
               onClick={() => this.focusImage(img.gifUrl)}
               className="gif-result-display"
@@ -64,8 +75,10 @@ class App extends React.Component {
               src={img.gifUrl}
               alt="gif"
             />
+            </div>
           ))}
         </div>
+      </div>
       </div>
     );
   }
